@@ -2,11 +2,11 @@
   <div class="topnavAndBanner">
     <Topnav />
     <div class="banner">
-      <h1><b>Eminent UI </b></h1>
+      <h1><b>WT UI </b></h1>
       <h3>是的，一个杰出的 UI 组件库</h3>
       <p class="actions">
-        <a href="//github.com/miqilin21/wt-ui-ele/" target="_blank">Github</a>
-        <router-link to="/doc">开始</router-link>
+        <a class="link" href="https://github.com/wt-front-end/wt-ui-ele" target="_blank">Github</a>
+        <router-link class="link" to="/doc">开始</router-link>
       </p>
     </div>
   </div>
@@ -29,7 +29,7 @@
       </li>
     </ul>
   </div>
-  <footer>MIT Licensed | Copyright © miqilin21</footer>
+  <footer>MIT Licensed | Copyright © WT</footer>
 </template>
 
 <script lang="ts">
@@ -41,13 +41,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$blue: #1296d8;
+$blue: #2c80c5;
 .topnavAndBanner {
-  background: linear-gradient(
-    145deg,
-    rgba(245, 253, 255, 1) 0%,
-    rgba(237, 251, 255, 1) 100%
-  );
+  background: linear-gradient(180deg, #58cdea 0%, #ffffff 100%);
   border-bottom-left-radius: 13%;
   border-bottom-right-radius: 13%;
   .banner {
@@ -58,7 +54,7 @@ $blue: #1296d8;
     flex-direction: column;
     > .actions {
       padding: 16px 0;
-      a {
+      .link {
         margin: 0 14px;
         color: #fff;
         background: $blue;
