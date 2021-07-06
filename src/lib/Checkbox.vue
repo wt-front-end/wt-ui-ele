@@ -124,10 +124,10 @@ $disable: #c0c4cc;
     max-height: 40px;
   }
   &.is-border.is-checked {
-    border-color: #409eff;
+    border-color: #2c80c5;
   }
 }
 .is-checked {
-  color: #409eff;
+  color: #2c80c5;
 }
 </style>

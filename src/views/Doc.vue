@@ -10,9 +10,15 @@
     <div class="content">
       <aside v-if="menuVisible" ref="aside">
         <div v-for="item in menu" :key="item.name">
-          <h2>{{ item.name }}</h2>
+          <h2 class="title">{{ item.name }}</h2>
           <ol>
-            <li v-for="links in item.children" :key="links.path">
+            <li
+              v-for="links in item.children"
+              :key="links.path"
+              :style="{
+                color: links.path.indexOf(router.path) > -1 ? '#2c80c5' : '',
+              }"
+            >
               <router-link :to="links.path">{{ links.name }}</router-link>
             </li>
           </ol>
@@ -27,10 +33,12 @@
 import Icon from '../lib/Icon.vue'
 import Topnav from '../components/Topnav.vue'
 import { computed, ref } from 'vue'
+import { useRoute } from 'vue-router'
 import menu from './menu'
 export default {
   components: { Topnav, Icon },
   setup() {
+    let router = ref(useRoute())
     const width = ref(document.documentElement.clientWidth)
     const menuVisible = ref(width.value >= 500)
     window.onresize = () => {
@@ -49,7 +57,15 @@ export default {
     const IconClassName = computed(() => {
       return menuVisible.value ? 'toggleMenu fixed' : 'toggleMenu'
     })
-    return { menuVisible, toggleMenu, clickLayout, IconClassName, aside, menu }
+    return {
+      menuVisible,
+      toggleMenu,
+      clickLayout,
+      IconClassName,
+      aside,
+      menu,
+      router,
+    }
   },
 }
 </script>
@@ -77,6 +93,10 @@ export default {
     padding-top: 60px;
     padding-left: 156px;
     display: flex;
+    .title {
+      color: #8d8d8e;
+      font-weight: 900;
+    }
     > aside {
       flex-shrink: 0;
       background: #fff;
@@ -89,11 +109,7 @@ export default {
       height: 100%;
       border-right: 1px solid rgb(217, 217, 217);
       z-index: 1;
-      > h2 {
-        margin-bottom: 10px;
-        padding: 5px 16px;
-        border: 1px dashed #ccc;
-      }
+      overflow-y: auto;
       > ol {
         > li {
           > a {
@@ -102,10 +118,10 @@ export default {
             text-decoration: none;
           }
           &:hover {
-             color: #409eff;
+            color: #2c80c5;
           }
           .router-link-active {
-            color: #409eff;
+            color: #2c80c5;
           }
         }
       }

@@ -62,7 +62,7 @@ $info: #38879b;
   padding: 0 10px;
   line-height: 30px;
   font-size: 12px;
-  color: #409eff;
+  color: #2c80c5;
   border: 1px solid #d9ecff;
   border-radius: 4px;
   box-sizing: border-box;
