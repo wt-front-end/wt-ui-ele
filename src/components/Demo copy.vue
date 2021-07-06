@@ -1,6 +1,6 @@
 <template>
   <div class="demo">
-    <h2>{{ component.doc }}</h2>
+    <h2>{{ component.__sourceCodeTitle }}</h2>
     <div class="demo-component">
       <component :is="component" />
     </div>
@@ -26,39 +26,39 @@ export default {
   setup(props) {
     console.log(import.meta.env.PROD,99)
     let html = ref('')
-    let getCode = function () {
-      let src = ''
-      if (import.meta.env.PROD) {
-        src = `https://raw.githubusercontent.com/wt-front-end/wt-ui-ele/master/src/components/doc/${props.component.name}.vue`
-      } else {
-        src = props.component.__file
-      }
-      // 创建一个新的xhr对象
-      let xhr = new XMLHttpRequest()
-      xhr.open('GET', src)
-      xhr.responseType = 'text' // 如果不兼容，可采用 xhr.overrideMimeType('text/plain;charset=utf-8');
-      xhr.send()
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          let data = xhr.responseText.toString()
-          if (import.meta.env.PROD) {
-            html.value = data
-          } else {
-             let str = data.substring(
-            data.lastIndexOf('data:application/json;base64,') + 29,
-            data.length
-          )
-          let res = JSON.parse(
-            decodeURIComponent(escape(window.atob(str)))
-          ).sourcesContent
-            html.value = res.length && res[0]
-          }
-        }
-      }
-    }
+    // let getCode = function () {
+    //   let src = ''
+    //   if (import.meta.env.PROD) {
+    //     src = `https://raw.githubusercontent.com/wt-front-end/wt-ui-ele/master/src/components/doc/${props.component.name}.vue`
+    //   } else {
+    //     src = props.component.__file
+    //   }
+    //   // 创建一个新的xhr对象
+    //   let xhr = new XMLHttpRequest()
+    //   xhr.open('GET', src)
+    //   xhr.responseType = 'text' // 如果不兼容，可采用 xhr.overrideMimeType('text/plain;charset=utf-8');
+    //   xhr.send()
+    //   xhr.onreadystatechange = function () {
+    //     if (xhr.readyState === 4 && xhr.status === 200) {
+    //       let data = xhr.responseText.toString()
+    //       if (import.meta.env.PROD) {
+    //         html.value = data
+    //       } else {
+    //          let str = data.substring(
+    //         data.lastIndexOf('data:application/json;base64,') + 29,
+    //         data.length
+    //       )
+    //       let res = JSON.parse(
+    //         decodeURIComponent(escape(window.atob(str)))
+    //       ).sourcesContent
+    //         html.value = res.length && res[0]
+    //       }
+    //     }
+    //   }
+    // }
     console.log(props.component, 88)
      onMounted(() => {
-      getCode()
+      // getCode()
     })
     const newhtml = computed(() => {
       return Prism.highlight(html.value, Prism.languages.html, 'html')

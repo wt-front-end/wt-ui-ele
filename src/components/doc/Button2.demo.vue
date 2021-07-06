@@ -21,6 +21,8 @@
 <script lang="ts">
 import { Button } from "../../lib/index";
 export default {
+  name:'Button2.demo',
+  doc:'描述信息',
   components: {
     Button,
   },

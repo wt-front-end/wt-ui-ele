@@ -1,6 +1,5 @@
 <template >
-  <div v-demo>
-    111
+  <div>
     <Button>你好</Button>
     <Button theme="link">你好</Button>
     <Button theme="text">你好</Button>
@@ -10,15 +9,10 @@
 <script lang="ts">
 import { Button } from "../../lib/index";
 export default {
+  name:'Button1.demo',
+  doc:'大小',
   components: {
     Button,
-  },
-  directives:{
-    demo:{
-  mounted(el) {
-      console.log('🐛 ~ file: Button1.demo.vue ~ line 19 ~ mounted ~ el', el)
-    }
-    }
   }
 };
 </script>

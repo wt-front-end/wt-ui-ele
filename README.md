@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">Eminent UI</h1>
+<h1 align="center">WT UI</h1>
 
 <div align="center">
 
