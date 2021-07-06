@@ -1,7 +1,7 @@
 /*
  * @Author: xkloveme
  * @Date: 2021-07-06 09:34:09
- * @LastEditTime: 2021-07-06 10:15:00
+ * @LastEditTime: 2021-07-06 22:39:47
  * @LastEditors: xkloveme
  * @Description: element导入
  * @FilePath: /wt-ui-ele/src/element.ts
@@ -99,6 +99,7 @@ import {
   ElNotification,
 } from 'element-plus';
 import Markdown from "./components/Markdown.vue";
+import Demo from "./components/Demo.vue";
 const components = [
   ElAlert,
   ElAside,
@@ -192,6 +193,7 @@ const app = createApp(App)
 
 app.use(router);
 app.component("Markdown", Markdown);
+app.component("Demo", Demo);
 components.forEach(component => {
   app.component(component.name, component)
 })
