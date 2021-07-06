@@ -14,14 +14,6 @@
 
 </div>
 
-## ✨ 特别说明
-
-这款组件库其实是我为了学习`vue3`以及巩固自己知识而写。
-
-全程亲手编写，尽量不采用第三方库，包括你看到的官网也几乎都是我自己写的。
-
-此库纯属个人练手项目，未经过系统严格的测试，所以**强烈不建议你将此 UI 库用于生产环境！**
-
 ## 📦 安装
 
 ```
@@ -35,15 +27,6 @@ yarn add wt-ui-ele
 ```
 
 ## 🔨 开始使用
-
-请先安装本组件库。
-
-然后在你的代码中写入下面的代码：
-
-```
-import 'wt-ui-ele/dist/lib/eminent.css';
-import {Button, Tabs, Tab, Switch, Dialog, openDialog, Tag, Progress, CheckBox} from "wt-ui-ele"
-```
 
 就可以使用我提供的组件了。
 

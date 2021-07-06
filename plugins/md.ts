@@ -1,7 +1,7 @@
 /*
  * @Author: xkloveme
  * @Date: 2021-07-05 17:17:24
- * @LastEditTime: 2021-07-06 10:12:03
+ * @LastEditTime: 2021-07-06 12:31:15
  * @LastEditors: xkloveme
  * @Description: 插件转换md文件
  * @FilePath: /wt-ui-ele/plugins/md.ts
@@ -27,7 +27,7 @@ export function md() {
       if (fileRegex.test(id)) {
         return {
           code: mdToJs(src),
-          map: null // 如果可行将提供 source map
+          map: null
         }
       }
     }

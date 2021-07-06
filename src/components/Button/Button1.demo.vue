@@ -1,8 +1,6 @@
-<demo>
-常规使用
-</demo>
-<template>
-  <div>
+<template >
+  <div v-demo>
+    111
     <Button>你好</Button>
     <Button theme="link">你好</Button>
     <Button theme="text">你好</Button>
@@ -15,5 +13,12 @@ export default {
   components: {
     Button,
   },
+  directives:{
+    demo:{
+  mounted(el) {
+      console.log('🐛 ~ file: Button1.demo.vue ~ line 19 ~ mounted ~ el', el)
+    }
+    }
+  }
 };
 </script>

@@ -29,7 +29,7 @@ export const router = createRouter({
         { path: "get-started", component: md(getStarted) },
         { path: "install", component: md(install) },
         // { path: "switch", component: SwitchDemo },
-        // { path: "button", component: ButtonDemo },
+        { path: "button", component: ButtonDemo },
         // { path: "dialog", component: DialogDemo },
         // { path: "tabs", component: TabsDemo },
         // { path: "tag", component: TagDemo },

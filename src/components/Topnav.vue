@@ -5,6 +5,9 @@
       <span class="hide">minent</span>
     </router-link>
     <ul class="menu hide">
+       <li>
+        <router-link to="/">首页</router-link>
+      </li>
       <li>
         <router-link to="/doc">文档</router-link>
       </li>
