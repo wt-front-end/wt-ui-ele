@@ -47,7 +47,7 @@ $blue: #2c80c5;
   border-bottom-left-radius: 13%;
   border-bottom-right-radius: 13%;
   .banner {
-    padding: 80px 0 160px;
+    padding: 160px 0;
     display: flex;
     justify-content: center;
     align-items: center;
