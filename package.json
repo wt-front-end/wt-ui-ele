@@ -7,7 +7,7 @@
   "main": "dist/lib/eminent.js",
   "module": "dist/lib/eminent.esm.js",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "build:pkg": "rollup -c"
   },

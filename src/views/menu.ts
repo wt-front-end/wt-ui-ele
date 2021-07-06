@@ -1,12 +1,17 @@
 /*
  * @Author: xkloveme
  * @Date: 2021-07-06 17:48:21
- * @LastEditTime: 2021-07-06 18:07:29
+ * @LastEditTime: 2021-07-06 21:52:20
  * @LastEditors: xkloveme
- * @Description: 侧边栏菜单
+ * @Description: 侧边栏菜单包含路由
  * @FilePath: /wt-ui-ele/src/views/menu.ts
  * @Copyright © xkloveme
  */
+import ButtonDemo from "./../components/ButtonDemo.vue"
+export let components:any = [
+  { path: '/doc/button', name: 'Button 组件',component: ButtonDemo },
+]
+
 
 export default [
   {
@@ -19,8 +24,6 @@ export default [
   },
   {
     name: '组件列表',
-    children: [
-      { path: '/doc/button', name: 'Button 组件' },
-    ]
+    children: components
   }
 ]
