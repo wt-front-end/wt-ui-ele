@@ -17,13 +17,53 @@
 ## 📦 安装
 
 ```
-npm install wt-ui-ele
+npm install
 ```
 
 或
 
 ```
-yarn add wt-ui-ele
+yarn add
+```
+
+## 运行
+
+```
+npm run dev
+```
+
+或
+
+```
+yarn dev
+```
+
+## 编写规范
+
+```
+├── App.vue
+├── assets
+│   ├── logo.png
+│   └── svg.js
+├── components
+│   ├── ButtonDemo.vue
+│   └── doc   // 需要把演示demo文件统一放在此文件夹下,不然线上读不到文件
+│       ├── Button1.demo.vue
+│       └── Button2.demo.vue
+├── element.ts
+├── index.scss
+├── lib   // 打包库文件
+├── main.ts
+├── markdown
+│   ├── get-started.md
+│   ├── install.md
+│   └── intro.md
+├── router.ts
+├── shims-vue.d.ts
+└── views
+    ├── Doc.vue
+    ├── Home.vue
+    └── menu.ts
 ```
 
 ## 🔨 开始使用
