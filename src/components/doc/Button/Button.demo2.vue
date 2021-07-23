@@ -19,9 +19,9 @@
 </template>
 
 <script lang="ts">
-import { Button } from "../../lib/index";
+import { Button } from "../../../lib/index";
 export default {
-  name:'Button2.demo',
+  name:'Button/Button.demo1',
   doc:'描述信息',
   components: {
     Button,
